@@ -48,15 +48,18 @@ public class Account {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj){
 			return true;
+		}
+			
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
 		Account other = (Account) obj;
-		if (accountNo != other.accountNo)
+		if (accountNo != other.accountNo){
 			return false;
+		}
 		if (Double.doubleToLongBits(amount) != Double.doubleToLongBits(other.amount))
 			return false;
 		if (customer == null) {
